@@ -15,6 +15,7 @@ public class MovieEntity implements Parcelable {
     private String synopsis;
     private Double userRating;
     private String releaseDate;
+    private String backdropImage;
 
     public MovieEntity(
             Integer id,
@@ -22,7 +23,8 @@ public class MovieEntity implements Parcelable {
             String moviePoster,
             String synopsis,
             Double userRating,
-            String releaseDate
+            String releaseDate,
+            String backdropImage
     ) {
         this.id = id;
         this.originalTitle = originalTitle;
@@ -30,6 +32,7 @@ public class MovieEntity implements Parcelable {
         this.synopsis = synopsis;
         this.userRating = userRating;
         this.releaseDate = releaseDate;
+        this.backdropImage = backdropImage;
     }
 
     private  MovieEntity(Parcel in) {
@@ -39,6 +42,7 @@ public class MovieEntity implements Parcelable {
         this.synopsis = in.readString();
         this.userRating = in.readDouble();
         this.releaseDate = in.readString();
+        this.backdropImage = in.readString();
     }
 
     @Override
@@ -54,6 +58,7 @@ public class MovieEntity implements Parcelable {
         dest.writeString(synopsis);
         dest.writeDouble(userRating);
         dest.writeString(releaseDate);
+        dest.writeString(backdropImage);
     }
 
     static final Parcelable.Creator<MovieEntity> CREATOR = new Parcelable.Creator<MovieEntity>() {
@@ -90,5 +95,9 @@ public class MovieEntity implements Parcelable {
 
     public String getReleaseDate() {
         return releaseDate;
+    }
+
+    public String getBackdropImage() {
+        return backdropImage;
     }
 }

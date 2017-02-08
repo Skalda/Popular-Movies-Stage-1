@@ -26,7 +26,8 @@ public class JsonParser {
                         MovieDatabase.buildImageUrl(result.getString("poster_path")),
                         result.getString("overview"),
                         result.getDouble("vote_average"),
-                        result.getString("release_date")
+                        result.getString("release_date"),
+                        MovieDatabase.buildImageUrl(result.getString("backdrop_path"))
                 ));
             }
         } catch (JSONException e) {

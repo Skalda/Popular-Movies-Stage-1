@@ -41,7 +41,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             mMovieRatingTextView.setText(getString(R.string.average_rating) + movieEntity.getUserRating().toString());
             mMovieReleaseDateTextView.setText(getString(R.string.release_date) + movieEntity.getReleaseDate());
             mMovieSynopsisTextView.setText(movieEntity.getSynopsis());
-            Picasso.with(this).load(movieEntity.getMoviePoster()).into(mMoviePosterImageView);
+            Picasso.with(this).load(movieEntity.getBackdropImage()).into(mMoviePosterImageView);
         }
     }
 
