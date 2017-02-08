@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 
 public class MovieDatabase {
-    final private static String API_KEY = "";
+    final private static String API_KEY = ""; // ENTER YOUR API KEY HERE
     final private static String API_KEY_PARAM_NAME = "api_key";
 
     final private static String API_BASE_URL = "http://api.themoviedb.org/3/movie/";
