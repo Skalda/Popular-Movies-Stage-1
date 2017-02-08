@@ -61,7 +61,7 @@ public class MovieEntity implements Parcelable {
         dest.writeString(backdropImage);
     }
 
-    static final Parcelable.Creator<MovieEntity> CREATOR = new Parcelable.Creator<MovieEntity>() {
+    public static final Parcelable.Creator<MovieEntity> CREATOR = new Parcelable.Creator<MovieEntity>() {
         @Override
         public MovieEntity createFromParcel(Parcel source) {
             return new MovieEntity(source);
